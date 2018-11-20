@@ -1,0 +1,28 @@
+{% extends "workout_base.html" %}
+
+{% block add_style %}
+    {% load static %}
+	<link rel="stylesheet" href="{% static 'css/add.css'%}">
+{% endblock %}
+
+{% block contents %}
+
+	<!-- content -->
+	<div class="container-fluid">
+		<div class="col-sm-12">
+			<!-- title -->
+			<div class="row text-center">
+            <article class="col-xs-12">
+				{% block title %}{% endblock %}
+ 			</article>
+			</div>
+			<!-- end title -->
+
+			{% block additional_contents %}
+			{% include 'user_info.html' %}
+			{% include 'match_info.html' %}
+			{% endblock %}
+		</div>
+	</div>
+	<!-- end content -->
+{% endblock %}

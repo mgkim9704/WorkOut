@@ -1,0 +1,39 @@
+{% extends "match_vs_base.html" %}
+
+{% block title %}
+<h2><strong>New Match</strong></h2>
+{% endblock %}
+
+{% block additional_contents %}
+{% include 'match_info.html' %}
+<div class="row">
+	<article class="col-xs-12 bottom-margin">
+		<div class="col-xs-4">
+			<h4>Note</h4>
+		</div>
+		<div class="col-xs-8">
+			<h5>{{ note }}</h5>
+		</div>
+	</article>
+</div>
+
+{% include 'user_info.html' %}
+
+<form method="POST" action="{% url 'new_match' match_number=match.id %}"> {% csrf_token %}
+	<div class="row">
+		<article class="col-xs-12 text-center">
+			<h4><mark class="yellow-mark">Join until {{ until }}</mark></h4>
+			<div class="col-xs-1 text-center top-margin">
+			</div>
+			<div class="col-xs-5 text-center top-margin">
+				<input type="submit" class="btn mybutton-design btn-block btn-lg" name="result" value="Reject">
+			</div>
+			<div class="col-xs-5 text-center top-margin">
+				<input type="submit" class="btn mybutton-design btn-block btn-lg" name="result" value="Join">
+			</div>
+			<div class="col-xs-1 text-center top-margin">
+			</div>
+		</article>
+	</div>
+</form>
+{% endblock %}

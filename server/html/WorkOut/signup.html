@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>WorkOut </title>    
+    <link href="css/bootstrap.css" rel="stylesheet">
+    <link href="css/add.css" rel="stylesheet">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+	<link href="https://fonts.googleapis.com/css?family=Rajdhani:400,700" rel="stylesheet">
+</head>
+
+<body class="signup-bg">
+	 <!-- Navigation -->
+    <nav class="navbar navbar-inverse navbar-static-top" role="navigation">
+        <div class="container">
+            <!-- Logo and responsive toggle -->
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+            <a class="navbar-brand" href="#"><span class=""></span>Sign Up</a>
+            </div>
+            <!-- Navbar links -->
+            <div class="collapse navbar-collapse" id="navbar">
+                <ul class="nav navbar-nav">
+                    <li class="active">
+                        <a href="#">Home</a>
+                    </li>
+                    <li>
+                        <a href="#">Real-time requests</a>
+                    </li>
+
+                    <li>
+                        <a href="#">UserTest</a>
+                    </li>
+                    <li>
+                        <a href="#">Badminton</a>
+                    </li>
+                    <li>
+                        <a href="#">Tennis</a>
+                    </li>
+                    <li>
+                        <a href="#">Table Tennis</a>
+                    </li>
+                    <li>
+                        <a href="#">My Matches</a>
+                    </li>
+                    <li>
+                        <a href="#">SignOut</a>
+                    </li>  
+                </ul>
+            </div>
+            <!-- /.navbar-collapse -->
+        </div>
+        <!-- /.container -->
+    </nav>  <!-- end navigation -->
+	
+	
+	<!--content-->
+	<div class="container-fluid">	
+		<div class="col-sm-12">
+		  <!-- title -->
+          <div class="row text-center">
+            <article class="col-xs-12">
+				<h2 class="text-white"><strong>Sign Up</strong></h2>
+            </article>
+          </div>
+		  <!-- end title -->
+
+
+	<!-- sign up -->
+	<form action="/action_page.php">
+	<div class="container">
+		<!-- id -->
+		<div class="row">
+			<article class="col-xs-12 bottom-margin0">
+				<div class="col-xs-12">
+					<label for="id"><h3 class="text-white">ID</h3></label>
+				</div>
+				<div class="col-xs-12">
+					<input class="signform " type="text" placeholder="Enter ID" name="id" required>
+				</div>
+			</article>
+		</div>
+		<!-- end id -->
+		<!-- password -->
+		<div class="row">
+			<article class="col-xs-12 bottom-margin0">
+				<div class="col-xs-12">
+					<label for="psw"><h3 class="text-white">Password</h3></label>
+				</div>
+				<div class="col-xs-12">
+					<input class="signform" type="password" placeholder="Enter Password" name="psw" required>
+				</div>
+			</article>
+		</div>
+		<!-- end password -->
+		<!-- password repeat -->
+		<div class="row">
+			<article class="col-xs-12 bottom-margin0">
+				<div class="col-xs-12">
+					<label for="repsw"><h3 class="text-white">Repeat Password</h3></label>
+				</div>
+				<div class="col-xs-12">
+					<input class="signform" type="password" placeholder="Repeat Password" name="repsw" required>
+				</div>
+			</article>
+		</div>
+		<!-- end password repeat -->
+		<!-- name -->
+		<div class="row">
+			<article class="col-xs-12 bottom-margin0">
+				<div class="col-xs-12">
+					<label for="name"><h3 class="text-white">Name</h3></label>
+				</div>
+				<div class="col-xs-12">
+					<input class="signform" type="text" placeholder="Enter Name" name="name" required>
+				</div>
+			</article>
+		</div>
+		<!-- end name -->
+		<!-- sex -->
+		<div class="row">
+			<article class="col-xs-12 bottom-margin0">
+				<div class="col-xs-12">
+					<label for="name"><h3 class="text-white">Sex</h3></label>
+				</div>
+				<div class="col-xs-12">
+					<div class="col-xs-1">
+					</div>
+					<div class="col-xs-5">
+						<label class="radio">
+							<input type="radio" name="optionsRadios" id="optionsRadios1" value="option1" checked>
+							<h4 class="text-white">woman</h4>
+						</label>
+					</div>
+					<div class="col-xs-5">
+						<label class="radio">
+							<input type="radio" name="optionsRadios" id="optionsRadios2" value="option2">
+							<h4 class="text-white">man</h4>
+						</label>
+					</div>
+					<div class="col-xs-1">
+					</div>
+				</div>
+			</article>
+		</div>
+		<!-- end sex -->
+		<!-- email -->
+		<div class="row">
+			<article class="col-xs-12 bottom-margin30">
+				<div class="col-xs-12 ">
+					<label for="email"><h3 class="text-white">Email</h3></label>
+				</div>
+				<div class="col-xs-12">
+					<input class="signform" type="text" placeholder="Enter Email" name="email" required>
+				</div>
+			</article>
+		</div>
+		<!-- end email -->
+		<!-- button -->
+		<div class="row">
+			<article class="col-xs-12 text-center bottom-margin30">
+				<div class="col-xs-12 text-center">
+					<button class="btn btn-default btn-lg btn-block mybutton-design">Join</button>
+				</div>
+            </article>
+		</div>
+		<!-- end button -->
+	</div>
+	</form>
+	<!--end sign up-->
+		</div>
+	</div>
+	
+
+<script>
+// Get the modal
+var modal = document.getElementById('id01');
+
+// When the user clicks anywhere outside of the modal, close it
+window.onclick = function(event) {
+    if (event.target == modal) {
+        modal.style.display = "none";
+    }
+}
+</script>
+
+    <!-- jQuery -->
+    <script src="js/jquery-1.11.3.min.js"></script>
+
+    <!-- Bootstrap Core JavaScript -->
+    <script src="js/bootstrap.min.js"></script>
+	
+	<!-- IE10 viewport bug workaround -->
+	<script src="js/ie10-viewport-bug-workaround.js"></script>
+	
+	<!-- Placeholder Images -->
+	<script src="js/holder.min.js"></script>
+	
+</body>
+
+</html>

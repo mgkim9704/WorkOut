@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "320089650496",
+    "firebase_url": "https://getmyprojectid.firebaseio.com",
+    "project_id": "getmyprojectid",
+    "storage_bucket": "getmyprojectid.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:320089650496:android:c010af25d75bf144",
+        "android_client_info": {
+          "package_name": "cs473_red.workout"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "320089650496-el6emrtciqk9jrqbpc8fec47neacvb9q.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "cs473_red.workout",
+            "certificate_hash": "bee98785decd51a4ff4bd085a1fbc0d4a827c6a2"
+          }
+        },
+        {
+          "client_id": "320089650496-ccm1m1t2pns6mc5vmq1thk6qncg88gve.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAWYFq9mzxv3PwBYVB2YM88x9dm-La4awI"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "320089650496-ccm1m1t2pns6mc5vmq1thk6qncg88gve.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

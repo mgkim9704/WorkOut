@@ -1,0 +1,73 @@
+{% extends "workout_base.html" %}
+
+{% block add_style %}
+    {% load static %}
+	<link rel="stylesheet" href="{% static 'css/add.css'%}">
+{% endblock %}
+
+{% block contents %}
+	<!-- content -->
+	<div class="container-fluid">	
+		<div class="col-sm-12">
+			<!-- title -->
+			<div class="row text-center">
+	            <article class="col-xs-12">
+					<h2><strong>Requests</strong></h2>
+    	        </article>
+			</div>
+			<!-- end title -->
+			<!-- filter -->
+
+			<form method="GET" action="{% url 'request_list' %}"> {% csrf_token %}
+				<div class="row text-center">
+					<article class="col-xs-12 top-margin">
+						<div class="col-xs-12">
+							<select class="form-control bottom-margin" name="sports_filter">
+							  <option>all (select sport)</option>
+								{% for sport in sports %}
+									 <option value="{{sport.id}}">{{sport.name}}</option>
+								{% endfor %}
+							</select>
+						<button class="btn btn-default  mybutton-design bottom-margin">Submit</button>
+						</div>
+					</article>
+				</div>
+			</form>
+			<!-- end filter -->
+			<!-- Request -->
+			{% for request in match_requests %}
+			<div class="row">
+				<article class="col-xs-12 ">
+					<button type="button" class="btn btn-default remove-border box-shadow" onclick="location.href='{% url 'manual_match' request_number=request.id %}'">
+						<div class="col-xs-5 top-margin8">
+							<img src="{% static 'img/user.png'%}" width=100% class="img-rounded">
+						</div>
+						<div class="col-xs-7">
+							<p><img src="{{ request.sport.icon.url }}">  {{request.user}} </p>
+							<table >
+								<tr>
+									<td>from</td>
+									<td style="padding-left: 5px;">
+										{{ request.start_date| date:"M d" }} {{ request.start_time}}
+									</td>
+								</tr>
+							<tr>
+								<td>to</td>
+								<td style="padding-left: 5px;">
+									{{ request.end_date| date:"M d" }} {{ request.end_time}}
+								</td>
+							</tr>
+							</table>
+							<p class="bottom-margin0">{{ request.location }}</p>
+						</div>
+					</button>
+    	        </article>
+    	      </div>
+			{% endfor %}
+		</div>
+	</div>
+	<!--end content-->
+
+{% include "add_button.html" %}
+
+{% endblock %}

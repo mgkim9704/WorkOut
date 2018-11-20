@@ -1,0 +1,30 @@
+{% extends "match_vs_base.html" %}
+
+{% block title %}
+<h2><strong>Match Result</strong></h2>
+<h4>Please enter the result</h4>
+{% endblock %}
+
+{% block additional_contents %}
+{% include 'user_info.html' %}
+{% include 'match_info.html' %}
+<!-- result button -->
+<form method="POST" action="{% url 'match_result' match_number=match.id %}"> {% csrf_token %}
+	<div class="row">
+	  <article class="col-xs-12 text-center">
+			<h3><strong>Did you win or lose?</strong></h3>
+			<div class="col-xs-1 text-center top-margin">
+			</div>
+			<div class="col-xs-5 text-center top-margin">
+				<input type="submit" class="btn mybutton-design btn-block btn-lg" name="result" value="Win">
+			</div>
+			<div class="col-xs-5 text-center top-margin">
+				<input type="submit" class="btn mybutton-design btn-block btn-lg" name="result" value="Lose">
+			</div>
+			<div class="col-xs-1 text-center top-margin">
+			</div>
+		</article>
+	</div>
+</form>
+<!-- end result button -->
+{% endblock %}

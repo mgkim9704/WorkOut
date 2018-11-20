@@ -1,0 +1,51 @@
+
+{% load custom_tags %}
+
+	<div class="jumbotron jumbotron-fluid announce bg-color margin0 mypadding2">
+		<h2 class="text-center text-bold">Open Requests</h2>
+		<table class="table">
+			{% for request in request_matches %}
+			{% get_rating request.user request.sport as rating %}
+				<tr>
+					<td >
+						{{ request.user }}
+					</td>
+					<td >
+						{{ rating }}
+					</td>
+					<td >
+						{{ request.start_date| date:"M d" }}
+					</td>
+					<td>
+						<button class="btn btn-default"
+						onclick="location.href='{% url 'manual_match' request_number=request.id %}'">
+							play
+						</button>
+					</td>
+				</tr>
+		{% endfor %}
+		</table>
+	</div>
+
+	<!-- open match -->
+	<div class="jumbotron jumbotron-fluid announce bg-color margin0 mypadding2">
+		<h2 class="text-bold text-center">Open Matches</h2>
+		<div class="text-center">
+			{% for match in matches %}
+			{% get_rating match.player1 match.sport as p1_rating %}
+			{% get_rating match.player2 match.sport as p2_rating %}
+				<!-- open match button -->
+				<button type="button" class="btn btn-default remove-border match-box2"
+				onclick="location.href='{% url 'match_detail' match_number=match.id %}'">
+					<div class="iconbox" >
+						<img src='{{ match.sport.icon2.url }}' height="100%">
+					</div>
+					<h2 class="text-bold bottom-margin">{{match.player1}} vs {{match.player2}}</h2>
+					<h4>{{ match.location }}</h4>
+					<h4>{{ match.start_date }} {{ match.start_time}}</h4>
+				</button>
+				<!-- end open match button -->
+			{% endfor %}
+			<!-- open match button -->
+	</div>
+	<!-- end open match -->

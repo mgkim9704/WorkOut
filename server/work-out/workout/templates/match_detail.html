@@ -1,0 +1,31 @@
+{% extends "match_vs_base.html" %}
+
+{% block title %}
+<h2><strong>Match Detail</strong></h2>
+{% endblock %}
+
+{% block additional_contents %}
+{% include 'match_info.html' %}
+{% if match.winner %}
+<div class="row">
+	<article class="col-xs-12">
+		<div class="col-xs-4">
+			<h4>Winner</h4>
+		</div>
+		<div class="col-xs-8">
+			<h4>{{ match.winner }}</h4>
+		</div>
+	</article>
+</div>
+{% endif %}
+{% include 'user_info.html' %}
+{% if match.status == 2  %}
+<div class="row">
+	<article class="col-xs-12 text-center">
+		<button class="btn btn-default btn-lg btn-block mybutton-design" onclick="location.href='{% url 'match_result' match_number=match.id %}'">
+			Enter the result
+		</button>
+	</article>
+</div>
+{% endif %}
+{% endblock %}

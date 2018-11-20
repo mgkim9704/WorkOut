@@ -1,0 +1,20 @@
+{% extends "workout_base.html" %}
+
+{% block add_style %}
+    {% load static %}
+	<link rel="stylesheet" href="{% static 'css/add.css'%}">
+{% endblock %}
+
+{% block navbar_attribute%}bottom-margin0  {% endblock %}
+{% block contents %}
+
+	<!-- announce -->
+	<div class="jumbotron jumbotron-fluid announce announce-bg text-white margin0">
+		<h1 class="text-bold bottom-margin0">Hello {{ user }}!</h1>
+		<hr class="line">
+		<p > How about a game? Let's play with us! </p>
+	</div>
+	<!-- end announce -->
+{% include "fill.html" %}
+{% include "add_button.html" %}
+{% endblock %}

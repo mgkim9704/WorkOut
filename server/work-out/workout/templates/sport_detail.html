@@ -1,0 +1,32 @@
+{% extends "workout_base.html" %}
+
+{% block add_style %}
+    {% load static %}
+	<link rel="stylesheet" href="{% static 'css/add.css'%}">
+{% endblock %}
+{% block navbar_attribute%} bottom-margin0 {% endblock %}
+
+{% block contents %}
+	<!-- title and user info -->
+	<div class="jumbotron jumbotron-fluid announce detail-bg margin0">
+		<h1 class="text-bold bottom-margin0">{{sport_name}}</h1>
+		<hr class="line4">
+		<p >Are you looking for a patner? We would be glad to support your game!</p>
+		<div class="detailbox text-center">
+			<h2>{{ user.username }}</h2>
+			<h4>{{win_count}} Win / {{lose_count}} Lose</h4>
+			<h4 class="bottom-margin30">Rank: {{ability.rating}}</h4>
+			<div class="progress">
+				<div class="progress-bar color2" role="progressbar" aria-valuenow="50"
+  aria-valuemin="0" aria-valuemax="100" style="width:{{bar_value}}%">
+					{{ability.rating}}
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- end title and user info -->
+
+{% include "fill.html" %}
+{% include "add_button.html" %}
+
+{% endblock %}

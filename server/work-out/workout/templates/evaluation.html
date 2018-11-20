@@ -1,0 +1,103 @@
+{% extends "workout_base.html" %}
+
+{% block add_style %}
+    {% load static %}
+	<link rel="stylesheet" href="{% static 'css/add.css'%}">
+{% endblock %}
+
+{% block contents %}
+
+	<form method="POST" action="{% url 'evaluation' match_number=match.id %}"> {% csrf_token %}
+	<div class="container-fluid">	
+		<div class="col-sm-12">
+		  <!-- Articles -->
+          <div class="row text-center">
+            <article class="col-xs-12">
+				<h2><strong>Evaluation</strong></h2>
+				<h4>How was your partner?</h4>
+            </article>
+          </div>
+
+          <div class="row">
+            <article class="col-xs-12">
+				<div class="col-xs-3">
+				</div>
+				<div class="col-xs-6 text-center">
+					<button type="button" class="btn btn-default remove-border user-button"
+            			onclick="location.href='{% url 'player_detail' sport_name=match.sport.get_url_name user_id=target.id  %}'">
+						<img src="{% static 'img/user.png' %}" width="100%" class="img-rounded text-center">
+					</button>
+				</div>
+				<div class="col-xs-3">
+				</div>
+            </article>
+          </div>
+          <div class="row">
+            <article class="col-xs-12">
+				<div class="col-xs-3">
+				</div>
+				<div class="col-xs-6 text-center">
+					<h4>{{ target }}</h4>
+				</div>
+				<div class="col-xs-3">
+				</div>
+            </article>
+          </div>
+          <div class="row">
+            <article class="col-xs-12">
+				<div class="col-xs-12">
+					<h4>Manner</h4>
+				</div>
+				<div class="col-xs-12 text-center">
+				      <div class="star-rating">
+				        <span class="glyphicon glyphicon-star-empty" data-rating="1"></span>
+				        <span class="glyphicon glyphicon-star-empty" data-rating="2"></span>
+				        <span class="glyphicon glyphicon-star-empty" data-rating="3"></span>
+				        <span class="glyphicon glyphicon-star-empty" data-rating="4"></span>
+				        <span class="glyphicon glyphicon-star-empty" data-rating="5"></span>
+				        <input type="hidden" name="manner" class="rating-value" value="3">
+				      </div>
+				</div>
+            </article>
+          </div>
+          <div class="row">
+            <article class="col-xs-12">
+				<div class="col-xs-12">
+					<h4>Skills</h4>
+				</div>
+				<div class="col-xs-12 text-center">
+				      <div class="star-rating2">
+				        <span class="glyphicon glyphicon-star-empty" data-rating="1"></span>
+				        <span class="glyphicon glyphicon-star-empty" data-rating="2"></span>
+				        <span class="glyphicon glyphicon-star-empty" data-rating="3"></span>
+				        <span class="glyphicon glyphicon-star-empty" data-rating="4"></span>
+				        <span class="glyphicon glyphicon-star-empty" data-rating="5"></span>
+				        <input type="hidden" name="skill" class="rating-value" value="3">
+				      </div>
+				</div>
+            </article>
+          </div>
+          <div class="row">
+            <article class="col-xs-12">
+				<div class="col-xs-12">
+					<h4>Comments</h4>
+				</div>
+				<div class="col-xs-12 bottom-margin">
+					<textarea class="form-control" rows="2" name="comments"></textarea>
+				</div>
+            </article>
+          </div>
+
+          <div class="row">
+            <article class="col-xs-12 text-center">
+				<div class="col-xs-12 text-center">
+					<input type="submit" class="btn btn-default btn-lg btn-block mybutton-design" value="submit">
+				</div>
+            </article>
+          </div>
+
+		</div>
+	</div>
+	</form>
+		<!--/Center Column-->
+{% endblock %}

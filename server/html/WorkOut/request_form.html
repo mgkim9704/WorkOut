@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>WorkOut </title>    
+    <link href="css/bootstrap.css" rel="stylesheet">
+    <link href="css/add.css" rel="stylesheet">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+	<link href="https://fonts.googleapis.com/css?family=Rajdhani:400,700" rel="stylesheet">
+</head>
+
+<body class="req-bg">
+	 <!-- Navigation -->
+    <nav class="navbar navbar-inverse navbar-static-top" role="navigation">
+        <div class="container">
+            <!-- Logo and responsive toggle -->
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+            <a class="navbar-brand" href="#"><span class=""></span>Make Schedule</a>
+            </div>
+            <!-- Navbar links -->
+            <div class="collapse navbar-collapse" id="navbar">
+                <ul class="nav navbar-nav">
+                    <li class="active">
+                        <a href="#">Home</a>
+                    </li>
+                    <li>
+                        <a href="#">Real-time requests</a>
+                    </li>
+
+                    <li>
+                        <a href="#">UserTest</a>
+                    </li>
+                    <li>
+                        <a href="#">Badminton</a>
+                    </li>
+                    <li>
+                        <a href="#">Tennis</a>
+                    </li>
+                    <li>
+                        <a href="#">Table Tennis</a>
+                    </li>
+                    <li>
+                        <a href="#">My Matches</a>
+                    </li>
+                    <li>
+                        <a href="#">SignOut</a>
+                    </li>  
+                </ul>
+            </div>
+            <!-- /.navbar-collapse -->
+        </div>
+        <!-- /.container -->
+    </nav>  <!-- end navigation -->
+	
+	
+	<!-- content -->
+	<div class="container-fluid">	
+		<div class="col-sm-12">
+			<!-- title -->
+			<div class="row text-center">
+            	<article class="col-xs-12">
+					<h2 class="text-white"><strong>Make Schedule</strong></h2>
+ 				</article>
+			</div>
+			<!-- end title -->
+			<!-- sport -->
+			<div class="row">
+            	<article class="col-xs-12 bottom-margin">
+					<div class="col-xs-12 ">
+						<h3 class="text-white">Choose sport</h3>
+						<select class="form-control">
+							<option>UserTest</option>
+							<option>Badminton</option>
+							<option>Tennis</option>
+							<option>Table Tennis</option>
+						</select>
+					</div>
+ 				</article>
+			</div>
+			<!-- end sport -->
+			<!-- time -->
+			<div class="row">
+            	<article class="col-xs-12 bottom-margin">
+					<div class="col-xs-12 ">
+						<h3 class="text-white">Set time</h3>
+	  					<fieldset>
+							<div class="control">
+								<h4 class="text-white">Time:</h4>
+								<input type="time" id="appt-time" name="appt-time" class="setup" value="now"/>
+								<h4 class="text-white">Date:</h4>
+								<input type="date" id="theDate" name="appt-date" class="setup" required align="center" style="color:#000000"/>
+							</div>	  
+						</fieldset>
+					</div>
+				</article>
+			</div>
+			<!-- end time -->
+			<!-- option -->
+			<div class="row">
+            	<article class="col-xs-12">
+					<div class="col-xs-12 ">
+						<h3 class="text-white">Options</h3>
+						<div class="checkbox ft13 text-white">
+							<label>
+								<input type="checkbox" value="">
+								similar level
+							</label>
+						</div>
+						<div class="checkbox ft13 text-white">
+							<label>
+								<input type="checkbox" value="">
+								same sex
+							</label>
+						</div>
+						<div class="checkbox ft13 text-white">
+							<label>
+								<input type="checkbox" value="">
+								close by
+							</label>
+						</div>
+						<div class="checkbox ft13 text-white">
+							<label>
+								<input type="checkbox" value="">
+								public profile
+							</label>
+						</div>
+						<div class="checkbox ft13 text-white">
+							<label>
+								<input type="checkbox" value="">
+								public match records
+							</label>
+						</div>
+					</div>
+				</article>
+			</div>
+			<!-- end option -->
+			<!-- note -->
+			<div class="row">
+            	<article class="col-xs-12 bottom-margin30">
+					<div class="col-xs-12 ">
+						<h3 class="text-white">Note to your partner</h3>
+						<textarea class="form-control" rows="3"></textarea>
+					</div>
+ 				</article>
+			</div>
+			<!-- end note -->
+			<!-- deposit -->
+			<div class="row">
+            	<article class="col-xs-12">
+					<div class="col-xs-12 ft13">
+						<div class="checkbox text-white">
+							<label>
+								<input type="checkbox" value="">
+								I accept to be fined if I cause the problem.
+							</label>
+						</div>
+					</div>
+				</article>
+			</div>
+			<!-- end deposit -->
+		</div>
+		<!-- button -->
+		<div class="row">
+			<article class="col-xs-12 text-center bottom-margin30">
+				<div class="col-xs-12 text-center bottom-margin30">
+					<button class="btn btn-default btn-lg btn-block mybutton-design">Submit</button>
+				</div>
+            </article>
+		</div>
+		<!-- end button -->
+	</div>
+
+
+</script>
+
+    <!-- jQuery -->
+    <script src="js/jquery-1.11.3.min.js"></script>
+
+    <!-- Bootstrap Core JavaScript -->
+    <script src="js/bootstrap.min.js"></script>
+	
+	<!-- IE10 viewport bug workaround -->
+	<script src="js/ie10-viewport-bug-workaround.js"></script>
+	
+	<!-- Placeholder Images -->
+	<script src="js/holder.min.js"></script>
+	
+</body>
+
+</html>

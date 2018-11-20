@@ -1,0 +1,54 @@
+{% block user_info %}
+<!-- user info -->
+{% load static %}
+{% load custom_tags %}
+<div class="row">
+    <article class="col-xs-12 top-margin">
+        <div class="col-xs-5">
+            <button type="button" class="btn btn-default remove-border user-button"
+                    onclick="location.href='{% url 'player_detail' sport_name=match.sport.get_url_name user_id=match.player1.id  %}'">
+                <img src="{% static 'img/user.png'%}" width="100%" class="img-rounded">
+            </button>
+        </div>
+        <div class="col-xs-2">
+        </div>
+        <div class="col-xs-5">
+            <button type="button" class="btn btn-default remove-border user-button"
+                    onclick="location.href='{% url 'player_detail' sport_name=match.sport.get_url_name user_id=match.player2.id  %}'">
+                <img src="{% static 'img/user.png'%}" width="100%" class="img-rounded">
+            </button>
+        </div>
+    </article>
+</div>
+
+
+<div class="row">
+    <article class="col-xs-12 text-center">
+        <div class="col-xs-5">
+            <h4>{{ match.player1 }}</h4>
+            {% get_rating match.player1 match.sport as p1_rating %}
+            <div class="progress">
+                <div class="progress-bar color2" role="progressbar" aria-valuenow="60"
+aria-valuemin="0" aria-valuemax="100" style="width:{{p1_rating | get_rating_bar }}%">
+                    {{p1_rating}}
+                </div>
+            </div>
+        </div>
+        <div class="col-xs-2">
+            <h4> VS </h4>
+        </div>
+        <div class="col-xs-5">
+            <h4>{{ match.player2 }}</h4>
+            {% get_rating match.player2 match.sport as p2_rating %}
+            <div class="progress">
+                <div class="progress-bar color2" role="progressbar" aria-valuenow="50"
+aria-valuemin="0" aria-valuemax="100" style="width:{{p2_rating | get_rating_bar }}%">
+                    {{p2_rating}}
+                </div>
+            </div>
+        </div>
+    </article>
+</div>
+
+<!-- end user info -->
+{% endblock %}
