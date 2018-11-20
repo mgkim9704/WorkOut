@@ -85,5 +85,6 @@ Database schema of our site can be check below.
 
 
 # Our github repository
+## For TA please visit our another git repository!
  - [https://github.com/choiking10/cs473-workout](https://github.com/choiking10/cs473-workout)
  - [https://github.com/mgkim9704/WorkOut](https://github.com/mgkim9704/WorkOut)
